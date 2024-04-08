@@ -3,6 +3,8 @@ import cv2 as cv
 import numpy as np
 # from cv_bridge import CvBridge
 
+from image_io import ImageIO
+
 
 def depth_clbck(depth_msg):
 
@@ -21,7 +23,9 @@ def depth_clbck(depth_msg):
 
 # print(1)
 
-samp = cv.imread("reference_images/so_sample_image.jpg")
+reader = ImageIO("reference_images")
+
+# samp = cv.imread("reference_images/so_sample_image.jpg")
 # cv.imshow("image", samp)
 # cv.waitKey()
-depth_clbck(samp)
+depth_clbck(reader.read_image("so_sample_image.jpg"))
