@@ -23,9 +23,11 @@ def depth_clbck(depth_msg):
 
 # print(1)
 
-reader = ImageIO("reference_images")
+if __name__ == "__main__":
 
-# samp = cv.imread("reference_images/so_sample_image.jpg")
-# cv.imshow("image", samp)
-# cv.waitKey()
-depth_clbck(reader.read_image("so_sample_image.jpg"))
+    reader = ImageIO("reference_images")
+
+    # samp = cv.imread("reference_images/so_sample_image.jpg")
+    # cv.imshow("image", samp)
+    # cv.waitKey()
+    depth_clbck(reader.read_image("street_image.jpeg"))
