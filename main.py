@@ -30,4 +30,4 @@ if __name__ == "__main__":
     # samp = cv.imread("reference_images/so_sample_image.jpg")
     # cv.imshow("image", samp)
     # cv.waitKey()
-    depth_clbck(reader.read_image("street_image.jpeg"))
+    print(reader.read_image("IMG_0358.JPG").shape)
